@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Batik Nusantara</title>    
+    <!-- My Own Styles -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+   
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="jumbotron">
+        <h1>Batik Nusantara</h1>
+        <p>
+          Telusuri keindahan dan keunikan kain tradisional Indonesia, Batik.
+        </p>
+      </div>
+      <nav>
+        <div class="dropdown">
+          <button onclick="toggleDropdown()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#sejarah">Sejarah</a>
+            <a href="#motif">Motif</a>
+            <a href="#jenis">Jenis</a>
+          </div>
+        </div>
+      </nav>
+      
+
+    </header>
+
+    <main>
+      <div id="content">
+        <article id="sejarah" class="card">
+          <h2>Sejarah</h2>
+          <img src="assets/image/sejarah.jpeg" alt="sejarah batik" class="featured-image"/>
+          <p>
+            Batik, seni membatik kain dengan menggunakan lilin sebagai bahan penghalang, memiliki sejarah panjang di Indonesia. Dikenal sebagai warisan budaya tak benda oleh UNESCO, Batik mencerminkan kekayaan budaya dan kreativitas masyarakat Indonesia.
+          </p>
+          <p>
+            Proses pembuatan batik melibatkan teknik khusus dan memiliki makna simbolis yang mendalam.
+          </p>
+        </article>
+
+        <article id="motif" class="card"> 
+          <h2>Motif</h2>
+          <img src="assets/image/motif.webp" alt="motif batik" class="featured-image"/>
+          <p>
+            Motif Batik sangat beragam dan bervariasi, mencakup elemen-elemen seperti alam, binatang, geometris, dan budaya lokal. Setiap motif sering kali memiliki makna tertentu yang melambangkan cerita, keyakinan, atau nilai-nilai kehidupan.
+          </p>
+          <p>
+            Batik juga sering digunakan dalam berbagai acara adat dan upacara penting.
+          </p>
+        </article>
+
+        <article id="jenis" class="card">
+          <h2>Jenis Batik</h2>
+          <p>
+            Beberapa jenis batik yang populer antara lain:
+          </p>
+
+          <section>
+            <h3>Batik Tulis</h3>
+            <img src="assets/image/tulis.jpg" alt="batik tulis" class="featured-image"/>
+            <p>
+              Batik tulis, yang dibuat dengan tangan, sering dianggap sebagai yang paling bernilai karena melibatkan keterampilan dan kesabaran yang tinggi.
+            </p>
+          </section>
+
+          <section>
+            <h3>Batik Cap</h3>
+            <img src="assets/image/cap.jpg" alt="batik cap" class="featured-image"/>
+            <p>
+              Batik cap, yang menggunakan cap atau stempel untuk mencetak pola, adalah cara produksi yang lebih efisien dan sering kali lebih terjangkau.
+            </p>
+          </section>
+        </article>
+      </div>
+
+      <aside>
+        <article class="profile card">
+          <header>
+            <h2>Moch. Adira Sakhi</h2>
+            <p>Siswa SMK</p>
+            <figure>
+              <img src="assets/image/profile.jpg" style="width: 100px; height: 100px;"/>
+            </figure>
+          </header>
+
+          <section>
+            <h3>Informasi Lainnya</h3>
+
+            <table>
+              <tr>
+                <th>Asal Negara</th>
+                <td>Indonesia</td>
+              </tr>
+              <tr>
+                <th>Umur</th>
+                <td>17</td>
+              </tr>
+              <tr>
+                <th>Jenis Kelamin</th>
+                <td>Laki-Laki</td>
+              </tr>
+              <tr>
+                <th>Hobi</th>
+                <td>Main Game</td>
+              </tr>
+            </table>
+          </section>
+        </article>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Belajar Dasar Pemrograman Web &#169; 2019, Dicoding Academy</p>
+    </footer>
+
+    <script>
+      // JavaScript untuk dropdown
+      function toggleDropdown() {
+        var dropdown = document.getElementById("myDropdown");
+        dropdown.classList.toggle("show");
+      }
+    
+      // Tutup dropdown ketika pengguna mengklik di luar dropdown
+      window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
+    
+      
+  </body>
+</html>
